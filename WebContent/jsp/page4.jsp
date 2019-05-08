@@ -1,14 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" errorPage="error/error.jsp"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>测试页面报错</title>
+<title>pageContext的include方法</title>
 </head>
 <body>
 	<% 
-		int i=1/0;
+		pageContext.include("/jspfragments/head.jspf");
+	%>
+	网页主体内容
+	<% 
+		pageContext.include("/jspfragments/foot.jspf");
 	%>
 </body>
 </html>
