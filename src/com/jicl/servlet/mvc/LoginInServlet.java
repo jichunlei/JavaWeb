@@ -43,8 +43,10 @@ public class LoginInServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//设置请求体编码
 	    request.setCharacterEncoding("utf-8");
+	    //收集请求参数
 	    String username = request.getParameter("username");
 	    String password = request.getParameter("password");
+	    //封装到模型中
 	    User user = new User();
 	    user.setPassword(password);
 	    user.setUsername(username);
