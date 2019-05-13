@@ -4,10 +4,10 @@
 <html>
 <head>
 <title>404错误提示页面</title>
-<meta http-equiv="refresh" content="3;url=welcome.jsp">
+<meta http-equiv="refresh" content="3;url=/JavaWeb/welcome.jsp">
 </head>
 <body>
-	<img alt="没有找到您要访问的页面..." src="picture/404.jpg"><br/>
-	3秒钟自动跳转回页面，如果没有跳转，请点击<a href="welcome.jsp">这里</a>
+	<img alt="没有找到您要访问的页面..." src="/JavaWeb/picture/404.jpg"><br/>
+	3秒钟自动跳转回页面，如果没有跳转，请点击<a href="/JavaWeb/welcome.jsp">这里</a>
 </body>
 </html>
