@@ -33,4 +33,51 @@
     <url-pattern>*.jsp</url-pattern>
     <url-pattern>*.jspf</url-pattern>
   </servlet-mapping>
+  
+  <!-- 配置过滤器1 -->
+  <filter>
+  	<filter-name>FilterDemo</filter-name>
+  	<filter-class>com.jicl.filter.FilterDemo</filter-class>
+  </filter>
+  <!-- 映射过滤器 -->
+  <filter-mapping>
+  	<filter-name>FilterDemo</filter-name>
+  	<!-- 拦截请求的url -->
+  	<url-pattern>/mvc/login.jsp</url-pattern>
+  </filter-mapping>
+  
+  <!-- 配置过滤器2 -->
+  <filter>
+  	<filter-name>FilterDemo2</filter-name>
+  	<filter-class>com.jicl.filter.FilterDemo2</filter-class>
+  </filter>
+  <!-- 映射过滤器 -->
+  <filter-mapping>
+  	<filter-name>FilterDemo2</filter-name>
+  	<!-- 拦截请求的url -->
+  	<url-pattern>/mvc/login.jsp</url-pattern>
+  </filter-mapping>
+  
+  <!-- 配置过滤器3 -->
+  <filter>
+  	<filter-name>FilterDemo3</filter-name>
+  	<filter-class>com.jicl.filter.FilterDemo3</filter-class>
+  	<init-param>
+  		<param-name>param1</param-name>
+  		<param-value>value1</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>param2</param-name>
+  		<param-value>value2</param-value>
+  	</init-param>
+  </filter>
+  <!-- 映射过滤器 -->
+  <filter-mapping>
+  	<filter-name>FilterDemo3</filter-name>
+  	<!-- 拦截请求的url -->
+  	<url-pattern>/mvc/login.jsp</url-pattern>
+  </filter-mapping>
+  
+  
+  
 </web-app>
