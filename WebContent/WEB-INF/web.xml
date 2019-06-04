@@ -21,9 +21,6 @@
     <param-name>param1</param-name>
     <param-value>value3</param-value>
   </context-param>
-  <session-config>
-    <session-timeout>15</session-timeout>
-  </session-config>
   <error-page>
     <error-code>404</error-code>
     <location>/error/404error.jsp</location>
@@ -65,4 +62,21 @@
     <filter-name>FilterDemo3</filter-name>
     <url-pattern>/mvc/login.jsp</url-pattern>
   </filter-mapping>
+  
+  <!-- 注册监听器 -->
+  <listener>
+  	<description>MyServletContextListener</description>
+  	<listener-class>com.jicl.listener.MyServletContextListener</listener-class>
+  </listener>
+  <listener>
+  	<description>MyHttpSessionListener</description>
+  	<listener-class>com.jicl.listener.MyHttpSessionListener</listener-class>
+  </listener>
+  <!-- 配置session的存活时间为1分钟 -->
+  <session-config>
+  	<session-timeout>1</session-timeout>
+  </session-config>
+  
+  
+  
 </web-app>
